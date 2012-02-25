@@ -1,16 +1,37 @@
 body {
-  font-family: 'Concert One', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #222;
 }
 
+h1, h2 {
+  font-family: 'Doppio One', sans-serif;
+}
+
 h1 {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   font-size: 100px;
+}
+
+h1 a {
+  background: #ff0;
+  padding: 2px;
+  text-decoration: none;
+  background-image: url(/images/3d_glasses.png);
+  background-repeat: no-repeat;
+  background-position: 98% 100%;
+  padding-right: 140px;
+}
+
+h1 a,
+h1 a:hover,
+h1 a:active,
+h1 a:visited {
+  color: #000;
 }
 
 h2 {
   font-size: 24px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
@@ -25,19 +46,27 @@ a, a:hover, a:active, a:visited {
 }
 
 p {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  line-height: 22px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 
 time {
   font-size: 12px;
 }
 
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
 div#container {
   margin-left: 40px;
   margin-top: 20px;
   padding: 20px;
-  background-color: #eee;
   width: 800px;
 }
 
@@ -49,13 +78,33 @@ div#main {
 .wrapper {}
 
 article header {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 footer {
+  margin-top: 40px;
   font-size: 12px;
 }
 
 footer * {
   display: inline;
+}
+
+ul#people {
+  margin-top: 20px;
+}
+
+ul#people li {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+ul#people img {
+  float: left;
+  margin-right: 10px;
+  width: 48px;
+}
+
+ul#people p {
+  margin: 0;
 }
