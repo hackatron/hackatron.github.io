@@ -51,6 +51,19 @@ p {
   margin-bottom: 18px;
 }
 
+ul, ol {
+  margin-top: 20px;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
 time {
   font-size: 12px;
 }
