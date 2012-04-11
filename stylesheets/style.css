@@ -3,13 +3,30 @@ body {
   color: #222;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
   font-family: 'Doppio One', sans-serif;
+}
+
+h2, h3, h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 h1 {
   margin-bottom: 60px;
-  font-size: 100px;
+  font-size: 625%;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+h3 {
+  font-size: 125%;
+}
+
+h4 {
+  font-size: 112.5%;
 }
 
 h1 a {
@@ -29,10 +46,9 @@ h1 a:visited {
   color: #000;
 }
 
-h2 {
-  font-size: 24px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+sup {
+  font-size: smaller;
+  vertical-align: super;
 }
 
 a {
@@ -53,6 +69,13 @@ p {
 
 ul, ol {
   margin-top: 20px;
+  list-style-type: initial;
+  padding-left: 30px;
+}
+
+ul.unstyled, ol.unstyled {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 li {
@@ -65,7 +88,7 @@ img {
 }
 
 time {
-  font-size: 12px;
+  font-size: 75%;
 }
 
 em {
@@ -74,6 +97,15 @@ em {
 
 strong {
   font-weight: bold;
+}
+
+code {
+  font-family: 'Courier', monospace;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #EAEAEA;
+  background-color: #F8F8F8;
+  border-radius: 3px;
 }
 
 div#container {
@@ -96,7 +128,7 @@ article header {
 
 footer {
   margin-top: 40px;
-  font-size: 12px;
+  font-size: 75%;
 }
 
 footer * {
