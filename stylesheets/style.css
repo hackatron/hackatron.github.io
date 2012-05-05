@@ -167,3 +167,21 @@ ul#people p {
   padding: 0;
   text-decoration: underline;
 }
+
+ul.posts {
+  overflow: hidden;
+  clear: both;
+  padding: 10px 0;
+}
+
+ul.posts .date, ul.posts .separator {
+  float: left;
+}
+
+ul.posts .date {
+  width: 105px;
+}
+
+ul.posts .separator {
+  margin-right: 10px;
+}
