@@ -69,8 +69,15 @@ p {
 
 ul, ol {
   margin-top: 20px;
-  list-style-type: initial;
   padding-left: 30px;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul {
+  list-style-type: disc;
 }
 
 ul.unstyled, ol.unstyled {
