@@ -115,6 +115,20 @@ code {
   border-radius: 3px;
 }
 
+pre {
+  border: 1px solid #EAEAEA;
+  background-color: #F8F8F8;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+pre > code {
+  padding: 0;
+  border: 0 none;
+  background-color: none;
+  white-space: pre;
+}
+
 div#container {
   margin-left: 40px;
   margin-top: 20px;
