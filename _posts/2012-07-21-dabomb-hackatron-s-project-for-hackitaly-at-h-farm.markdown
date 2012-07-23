@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DaBomb: Hackatron's project for Hackitaly at H-farm
+title: "DaBomb: Hackatron's project for Hackitaly at H-farm"
 ---
 
 [team]: http://hackatron.github.com/about.html
