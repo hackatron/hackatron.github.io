@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hackitaly at H-farm
+title: DaBomb: Hackatron's project for Hackitaly at H-farm
 ---
 
 [team]: http://hackatron.github.com/about.html
@@ -8,7 +8,7 @@ title: Hackitaly at H-farm
 [ready_steady_bang]: http://chambersjudd.com/readysteadybang
 [dabomb_server]: http://github.com/hackatron/dabomb-server
 
-Today [Hackatron team][team] attended the [Hackitaly 2012][hackitaly_2012] at H-farm.
+Today [Hackatron team][team] is attending [Hackitaly 2012][hackitaly_2012] at H-farm.
 
 Hackitaly is *"the first geek event Made in Italy"*, a unique event in Italy where the hacker attitude is strong but the hacker community is scattered. It's a great chance to meet people you always chat or tweet with and to have fun coding and hacking.
 
