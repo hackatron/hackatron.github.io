@@ -120,6 +120,7 @@ pre {
   background-color: #F8F8F8;
   border-radius: 3px;
   padding: 10px;
+  word-wrap: break-word;
 }
 
 pre > code {
