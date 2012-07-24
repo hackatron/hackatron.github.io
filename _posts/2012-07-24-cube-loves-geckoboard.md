@@ -1,10 +1,7 @@
 ---
 layout: post
 title: "Cube loves Geckoboard"
-category: statistics
-tags: [statstics, cube, geckoboard, chef, ruby]
 ---
-{% include JB/setup %}
 
 This is a [guest post](http://matteodepalo.github.com/statistics/2012/07/23/cube-loves-geckoboard/) by Matteo Depalo from the Responsa team.
 
@@ -63,6 +60,7 @@ We use Ruby on Rails as our stack so I've chosen the [cube-ruby](https://github.
 
 For example if we want to track a request we can write:
 
+	$cube = Cube::Client.new 'your-host.com'
 	$cube.send "request", :value => 'somevalue'
 
 ## Analysis
@@ -71,7 +69,8 @@ To compute metrics I've created a ruby gem called [cube-evaluator](https://githu
 
 Let's say we want the daily requests on our website in this month we can write:
 
-	daily_requests = Cube::Evaluator.metric(
+	$cube_evaluator = Cube::Evaluator.new 'your-host.com'
+	daily_requests = $cube_evaluator.metric(
 					   :expression => 'sum(request)',
 					   :start => 1.month.ago,
 					   :stop => Time.now,
@@ -109,4 +108,5 @@ and use your daily_requests hash to populate it
 	end
 	
 Congrats! You are now tracking statistics in the coolest way possible ;)
+
 
