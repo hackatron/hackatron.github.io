@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Node.js Conf 2012"
+---
+
+Saturday 10th of November me ([@johnnyaboh](http://twitter.com/johnnyaboh)) and Devis ([@batdevis](http://twitter.com/batdevis)) went to Brescia to attend the Node.js Conf 2012.
+
+It's been a great opportunity to get a lot of useful advices and we met new and old friends.
+
+There was **Max Bruning** talking about using DTrace and mdb to do in-situ and post-mortem debugging of real-time apps, **Glenn Block** and **Luciano Colosio** speaking about running your node.js app on *Windows Azure* infrastructure with an example showing *Save The Mom* app architecture.
+
+**Felix Geisendörfer** talked about javascript performances compared to C while developing the *MySQL driver for node.js* and gave an introduction to benchmarking and data analysis techniques.
+
+**Sergi Mansilla**, **Richard Rodger** talked about node.js apps in production at large scale with products such *Cloud9 IDE* and *businesspost.ie* and **Andrew Nesbitt** covered some ways to integrate different types of tools made with node with existing legacy applications.
+
+We talked also about node.js and hardware integration with **Simone Chiaretta** and his open source underwater vehicle called *OpenROV* and internet of things with **Matteo Collina** about *qest.me*: a MQTT protocol broker written in javascript.
+
+Honor mentions go to **Sam Reghenzi** who started a couple of flames with his shareable complains about node.js and **Golo Roden** with a talk about *empathic testing* using his new library [intent.js](http://github.com/goloroden/intent.js).
+
+It's been great also to see Luca Lanziani ([@_Nss_](http://twitter.com/_Nss_)), Gianluca Stivan ([@yawnt](http://twitter.com/yawnt)) and Filippo De Pretto ([@filnik90](http://twitter.com/filnik90)).
+
+Node.js is getting a lot of attention here in Italy thanks to events such the Node.js Conf and we're grateful to guys at **WEBdeBS** who made this possible.
