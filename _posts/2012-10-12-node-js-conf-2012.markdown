@@ -11,7 +11,7 @@ There was **Max Bruning** talking about using DTrace and mdb to do in-situ and p
 
 **Felix Geisendörfer** talked about javascript performances compared to C while developing the *MySQL driver for node.js* and gave an introduction to benchmarking and data analysis techniques.
 
-**Sergi Mansilla**, **Richard Rodger** talked about node.js apps in production at large scale with products such *Cloud9 IDE* and *businesspost.ie* and **Andrew Nesbitt** covered some ways to integrate different types of tools made with node with existing legacy applications.
+**Sergi Mansilla**, **Richard Rodger** talked about node.js apps in production at large scale with products such as *Cloud9 IDE* and *businesspost.ie* and **Andrew Nesbitt** covered some ways to integrate different types of tools made with node with existing legacy applications.
 
 We talked also about node.js and hardware integration with **Simone Chiaretta** and his open source underwater vehicle called *OpenROV* and internet of things with **Matteo Collina** about *qest.me*: a MQTT protocol broker written in javascript.
 
@@ -19,4 +19,4 @@ Honor mentions go to **Sam Reghenzi** who started a couple of flames with his sh
 
 It's been great also to see Luca Lanziani ([@_Nss_](http://twitter.com/_Nss_)), Gianluca Stivan ([@yawnt](http://twitter.com/yawnt)) and Filippo De Pretto ([@filnik90](http://twitter.com/filnik90)).
 
-Node.js is getting a lot of attention here in Italy thanks to events such the Node.js Conf and we're grateful to guys at **WEBdeBS** who made this possible.
+Node.js is getting a lot of attention here in Italy thanks to events such the Node.js Conf and we're grateful to the guys at **WEBdeBS** who made this possible.
