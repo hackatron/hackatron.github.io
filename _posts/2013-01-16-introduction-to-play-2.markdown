@@ -22,4 +22,4 @@ The feature that stands out the most is possibility to handle asynchronous non-b
 
 Akka is the Scala actor library. Its Future and Promise objects are used to encapsulate computations that need to be run on a separate thread. These objects are now merged in the core Scala language as of v2.10 so the Play 2.1 is having a big rewrite of Future and Promises APIs.
 
-The presentation is available [here][http://www.slideshare.net/MatteoDepalo/play-2-introduction]
+The presentation is available [here](http://www.slideshare.net/MatteoDepalo/play-2-introduction)
