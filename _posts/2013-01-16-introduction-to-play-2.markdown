@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Meeting[0]: Introduction to Play 2"
+title: "Meetings[0]: Introduction to Play 2"
 ---
 
 
