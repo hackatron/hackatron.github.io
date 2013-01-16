@@ -16,7 +16,7 @@ Scala is a language created by Martin Odersky in 2004. It's based on Java and it
 
 Play 2 is a web framework released in 2012, built with Scala and inspired by modern web frameworks such as Rails and Django.
 
-The feature that stands out the most is possibility to handle asynchronous non-blocking requests out of the box. This is great for streaming and for heavy computational operations that need to be run in a separate thread without blocking the entire web server.
+The feature that stands out the most is the possibility to handle asynchronous non-blocking requests out of the box. This is great for streaming and for heavy computational operations that need to be run in a separate thread without blocking the entire web server.
 
 ### Akka
 
