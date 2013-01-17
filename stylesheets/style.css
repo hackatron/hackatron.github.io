@@ -131,15 +131,37 @@ pre > code {
 }
 
 div#container {
-  margin-left: 40px;
+  margin-left: 100px;
   margin-top: 20px;
   padding: 20px;
-  width: 800px;
+  width: 640px;
 }
 
 div#main {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width:0) and (max-width:825px) {
+  h1 {
+    margin-bottom: 20px;
+    font-size: 250%;
+  }
+
+  h1 a {
+    background: #ff0;
+    padding: 2px;
+    text-decoration: none;
+    background-image: none;
+    padding-right: 0;
+  }
+
+  div#container {
+    margin: 0 auto;
+    padding: 20px;
+    width: auto;
+    max-width:100%;
+  }
 }
 
 .wrapper {}
@@ -196,14 +218,11 @@ ul.posts {
   padding: 10px 0;
 }
 
-ul.posts .date, ul.posts .separator {
-  float: left;
-}
-
 ul.posts .date {
-  width: 105px;
+  margin-bottom: 4px;
+  font-size: 80%;
 }
 
-ul.posts .separator {
-  margin-right: 10px;
+ul.posts a {
+  line-height: 28px;
 }
