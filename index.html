@@ -3,6 +3,17 @@ layout: default
 title: Hackatron
 ---
 
+<div id="search">
+  <form>
+    <input id="q" name="q" placeholder="Search">
+  </form>
+
+  <div id="results_container">
+    <h2>Search results:</h2>
+    <div id="search_results"></div>
+  </div>
+</div>
+
 <div id="home">
   <h2>Posts</h2>
   <ul class="posts unstyled">
@@ -14,3 +25,16 @@ title: Hackatron
     {% endfor %}
   </ul>
 </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="/javascripts/jquery-tapir.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#q').tapir('paramValue', 'q');
+    $('#search_results').tapir({token: '50fe98523f61b041100003f0', complete: function(query, data) {
+      if (query) {
+        $('#results_container').show();
+      }
+    }});
+  });
+</script>

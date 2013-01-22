@@ -211,12 +211,6 @@ ul#people p {
   text-decoration: underline;
 }
 
-ul.posts {
-  overflow: hidden;
-  clear: both;
-  padding: 10px 0;
-}
-
 ul.posts .date {
   margin-bottom: 4px;
   font-size: 80%;
@@ -224,4 +218,18 @@ ul.posts .date {
 
 ul.posts a {
   line-height: 28px;
+}
+
+#results_container {
+  display: none;
+  margin-bottom: 50px;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid #222;
+  font-family: 'Open sans', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0px;
 }
