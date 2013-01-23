@@ -8,30 +8,49 @@ title: About
   <p>
     We're a group of developers, designers, tinkers. We want to have fun building things and learning something new. We're Hackatron.
   </p>
-  <h2>Where</h2>
-  <p>At GoWar's block.</p>
-  <p>
-    H-Farm Ventures<br/>
-    Via Sile, 51<br/>
-    Ca' Tron, Treviso, Italy
-  </p>
-  <h2>When</h2>
+
+  <h2 id="where">Where</h2>
+  <div class="block">
+    <div class="venue">
+      <h3><a href="http://www.fungostudios.com/">FunGo Studios</a></h3>
+      <p>
+        Via Sile, 41<br/>
+        31056 Roncade<br/>
+        Treviso, Italy
+      </p>
+    </div>
+    <div class="venue">
+      <h3><a href="http://memecoworking.com/">Meme Coworking</a></h3>
+      <p>
+        Via Marignana, 86<br/>
+        31020 Mogliano Veneto<br/>
+        Treviso, Italy
+      </p>
+    </div>
+  </div>
+
+  <h2 id="when">When</h2>
   <p>Every Tuesday at 6:30 pm.</p>
-  <h2>IRC</h2>
-  <p>You can chat with Hackatron's team (or <a href="https://github.com/hackatron/hackatron-hubot">Hackabot</a> when no one is online) about software and life by joining the <a href="irc://irc.freenode.net/hackatron">#hackatron</a> channel at irc.freenode.net.</p>
-  <h2>People</h2>
-  <ul class="unstyled" id="people"></ul>
-  <h2>Notes</h2>
+
+  <h2 id="irc">IRC</h2>
+  <p>
+    You can chat with Hackatron's team (or <a href="https://github.com/hackatron/hackatron-hubot">Hackabot</a> when no one is online) about software and life by joining the <a href="irc://irc.freenode.net/hackatron">#hackatron</a> channel at irc.freenode.net.
+  </p>
+
+  <h2 id="organization">Organization</h2>
   <p>
     Source of this blog and projects' code can be found at <a href="http://github.com/hackatron">http://github.com/hackatron</a>.
   </p>
+
+  <h2 id="people">People</h2>
+  <ul class="unstyled" id="people_list"></ul>
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script src="https://raw.github.com/potomak/jquery-github/master/jquery.github.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="//raw.github.com/potomak/jquery-github/master/jquery.github.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    $("#people").github({
+    $("#people_list").github({
         organization: 'hackatron'
       , onComplete: function(response) {
           var length = typeof response.data != 'undefined' ? response.data.length : 0;

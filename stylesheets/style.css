@@ -165,6 +165,11 @@ div#main {
 
 .wrapper {}
 
+.block {
+  overflow: hidden;
+  clear: both;
+}
+
 article header {
   margin-bottom: 20px;
 }
@@ -178,23 +183,29 @@ footer * {
   display: inline;
 }
 
-ul#people {
+ul#people_list {
   margin-top: 20px;
 }
 
-ul#people li {
+ul#people_list li {
   overflow: hidden;
   margin-bottom: 10px;
 }
 
-ul#people img {
+ul#people_list img {
   float: left;
   margin-right: 10px;
   width: 48px;
 }
 
-ul#people p {
+ul#people_list p {
   margin: 0;
+}
+
+.venue {
+  float: left;
+  width: 280px;
+  margin-right: 20px;
 }
 
 #disqus_thread {
