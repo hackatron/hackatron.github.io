@@ -231,6 +231,10 @@ ul.posts a {
   line-height: 28px;
 }
 
+#next_meeting {
+  margin-bottom: 50px;
+}
+
 #results_container {
   display: none;
   margin-bottom: 50px;

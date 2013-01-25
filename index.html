@@ -3,6 +3,8 @@ layout: default
 title: Hackatron
 ---
 
+<div id="next_meeting"></div>
+
 <div id="search">
   <form>
     <input id="q" name="q" placeholder="Search">
@@ -36,5 +38,15 @@ title: Hackatron
         $('#results_container').show();
       }
     }});
+
+    $.ajax({
+      type: 'GET',
+      dataType: 'jsonp',
+      cache: false,
+      url: 'http://hackatron-hubot.herokuapp.com/hubot/topic/hackatron',
+      success: function(topic) {
+        $('#next_meeting').html('<h2>' + topic + '</h2>');
+      }
+    });
   });
 </script>
