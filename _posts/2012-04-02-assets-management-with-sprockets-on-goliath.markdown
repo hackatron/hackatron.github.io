@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Assets management with Sprockets on Goliath
+description: How to integrate Sprockets with Goliath to serve static assets
 ---
 
 At Hackatron we're working on a project based on Goliath, an open source version of the non-blocking (asynchronous) Ruby web server framework powering PostRank.

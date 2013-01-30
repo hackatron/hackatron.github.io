@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hacker weekend
+description: Hackatron at RubyDay and H-ack
 ---
 
 [rubyday]: http://rubyday.it

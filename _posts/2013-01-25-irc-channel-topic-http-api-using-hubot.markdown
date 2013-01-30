@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "IRC channel topic HTTP API using Hubot"
+title: IRC channel topic HTTP API using Hubot
+description: A Hackabot script to expose IRC channel info using HTTP
 ---
 
 [hubot]: http://hubot.github.com/

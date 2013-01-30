@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Meetings[0]: Introduction to Play 2"
+description: First presentation meeting, Matteo introduces Scala and the Play 2 Framework
 ---
-
 
 Yesterday we met for our first meeting. Matteo Depalo's duty was to introduce Hackatron to the Play 2 Framework.
 

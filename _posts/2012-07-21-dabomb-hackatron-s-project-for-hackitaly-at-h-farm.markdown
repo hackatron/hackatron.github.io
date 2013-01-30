@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "DaBomb: Hackatron's project for Hackitaly at H-farm"
+description: The development of DaBomb, a social game for iPhone, Hackatron's project for Hackitaly
 ---
 
 [team]: http://hackatron.github.com/about.html

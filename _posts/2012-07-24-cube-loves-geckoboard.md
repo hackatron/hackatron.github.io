@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Cube loves Geckoboard"
+title: Cube loves Geckoboard
+description: A mini-guide regarding the deployment and usage of Cube server and Geckoboard to track statistics
 ---
 
 *This is a [guest post](http://matteodepalo.github.com/statistics/2012/07/23/cube-loves-geckoboard/) by Matteo Depalo from the Responsa team.*

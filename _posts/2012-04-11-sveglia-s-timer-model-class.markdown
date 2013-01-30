@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sveglia's Timer model class
+description: Description of Sveglia's Timer model, its main attributes, and its lifecycle
 ---
 
 Sveglia app is composed by two main model classes: `Timer` and `TimerTemplate`, this post will explain some implementations details of `Timer` class.

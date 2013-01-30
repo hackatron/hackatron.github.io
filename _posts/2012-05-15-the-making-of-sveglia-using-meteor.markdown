@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The making of Sveglia using Meteor
+description: How to create a simple countdown timer using Meteor web framework
 ---
 
 [quick_start]: http://docs.meteor.com/#quickstart

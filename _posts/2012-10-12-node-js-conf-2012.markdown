@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Node.js Conf 2012"
+title: Node.js Conf 2012
+description: Giovanni and Devis at the Node.js Conf 2012
 ---
 
 Saturday 10th of November me ([@johnnyaboh](http://twitter.com/johnnyaboh)) and Devis ([@batdevis](http://twitter.com/batdevis)) went to Brescia to attend the Node.js Conf 2012.

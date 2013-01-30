@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Notes about Sveglia
+description: "Sveglia: a minimal countdown timer app"
 ---
 
 [Sveglia][sveglia] is the first project under development by the [Hackatron team][team].

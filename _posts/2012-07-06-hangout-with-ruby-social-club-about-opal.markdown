@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hangout with Ruby Social Club about Opal
+description: A video session with Ruby Social Club about Opal, a ruby to javascript compiler
 ---
 
 [yawnt]: http://twitter.com/yawnt

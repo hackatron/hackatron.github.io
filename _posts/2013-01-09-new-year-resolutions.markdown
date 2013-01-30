@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "New year resolutions"
+title: New year resolutions
+description: The new Hackatron format composed by presentation meetings and free meetings
 ---
 
 [meme]: http://memecoworking.com/

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Goliath web server framework
+description: Introduction about Sveglia, the first Hackatron project, and Goliath a non-blocking web server framework
 ---
 
 For the [first project][project] at Hackatron we want to experiment with [Goliath][goliath], the open source version of the non-blocking (asynchronous) Ruby web server framework powering PostRank.
