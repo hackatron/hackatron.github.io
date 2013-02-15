@@ -21,4 +21,4 @@ This means to define repeating visual features (like background and border style
 Essentially, this means “rarely use location-dependent styles”. An object should look the same no matter where you put it.
 
 
-The presentation is available [here](/assets/slides/oocss/index.html)
+The presentation is available [here](/slides/oocss.html)
