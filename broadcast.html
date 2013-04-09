@@ -1,0 +1,29 @@
+---
+layout: default
+title: Broadcast
+description: Broadcasting Hackatron's meetings
+---
+
+<div id="broadcast">
+  <h2>Meeting broadcast</h2>
+  
+  <p>
+    Broadcast will start at <span id="next_broadcast"></span>.
+  </p>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $.ajax({
+      type: 'GET',
+      dataType: 'jsonp',
+      cache: false,
+      url: 'http://hackatron-hubot.herokuapp.com/hubot/topic/hackatron',
+      success: function(topic) {
+        time = topic.replace(/[^\:]+\: /, '').replace(/ @.+/, '');
+        $('#next_broadcast').html(time);
+      }
+    });
+  });
+</script>
