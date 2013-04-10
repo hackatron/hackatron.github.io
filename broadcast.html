@@ -7,11 +7,18 @@ description: Broadcasting Hackatron's meetings
 <div id="broadcast">
   <h2>Meeting broadcast</h2>
   
-  <iframe width="420" height="315" src="http://www.youtube.com/embed/FnS6rukwXzo" frameborder="0" allowfullscreen></iframe>
+  <p>
+    Next broadcast is scheduled for <span id="next_broadcast"></span> and will start in <span id="timer"></span>.
+  </p>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="/javascripts/moment.min.js"></script>
 <script>
+  function plural(singular, n) {
+    return singular + (n > 1 || n <= 0 ? 's' : '');
+  }
+
   $(document).ready(function() {
     $.ajax({
       type: 'GET',
@@ -19,8 +26,24 @@ description: Broadcasting Hackatron's meetings
       cache: false,
       url: 'http://hackatron-hubot.herokuapp.com/hubot/topic/hackatron',
       success: function(topic) {
-        time = topic.replace(/[^\:]+\: /, '').replace(/ @.+/, '');
-        $('#next_broadcast').html(time);
+        timeString = topic.replace(/[^\:]+\: /, '').replace(/ @.+/, '');
+        $('#next_broadcast').html(timeString);
+        time = moment(timeString + '+0200', 'dddd, MMMM DD.., hh:mm A ZZ');
+        time.year(new Date().getFullYear());
+        timerId = setInterval(function(target) {
+          delta = Math.floor(target.unix() - (new Date().getTime() / 1000));
+          seconds = delta % 60;
+          delta = Math.floor(delta / 60);
+          minutes = delta % 60;
+          delta = Math.floor(delta / 60);
+          hours = delta % 24;
+          days = Math.floor(delta / 24);
+          timerString = days + ' ' + plural('day', days) + ', ' +
+                        hours + ' ' + plural('hour', hours) + ', ' +
+                        minutes + ' ' + plural('minute', minutes) + ', ' +
+                        seconds + ' ' + plural('second', seconds);
+          $('#timer').html(timerString);
+        }, 300, time);
       }
     });
   });
