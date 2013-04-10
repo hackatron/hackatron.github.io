@@ -203,6 +203,7 @@ ul#people_list img {
   float: left;
   margin-right: 10px;
   width: 48px;
+  border-radius: 48px;
 }
 
 ul#people_list p {
