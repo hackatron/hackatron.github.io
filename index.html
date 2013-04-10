@@ -24,6 +24,7 @@ description: We're a group of developers, designers, tinkers. We want to have fu
       <li>
         <div class="date">{{ post.date | date_to_string }}</div>
         <a href="{{ post.url }}">{{ post.title }}</a>
+        <q>{{ post.description }}</q>
       </li>
     {% endfor %}
   </ul>

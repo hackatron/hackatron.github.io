@@ -129,6 +129,13 @@ pre > code {
   white-space: pre;
 }
 
+q {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+} 
+
 div#container {
   margin-left: 100px;
   margin-top: 20px;
