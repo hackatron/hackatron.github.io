@@ -256,3 +256,11 @@ input {
   margin: 0;
   padding: 0px;
 }
+
+.moot a,
+.moot a:hover,
+.moot a:active,
+.moot a:visited {
+  background-color: inherit;
+  color: inherit;
+}
