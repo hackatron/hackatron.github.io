@@ -29,3 +29,5 @@ The presentation is available [here](http://goo.gl/GYlRw) (ita) as a Google Driv
 Web designers should attempt to think more about HTML and CSS instead using just Photoshop and Illustrator (their typography rules are focused on print rather than browsers).
 
 [Francesco Fraioli](http://twitter.com/pinakes) makes some considerations about web designer skills and role, the gap between graphic design and front-end, and an introduction to elements of web typography.
+
+The presentation is available [here](http://www.slideshare.net/francescofraioli/web-typography-18926022) (eng) as a Slideshare presentation.
