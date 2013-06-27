@@ -55,7 +55,7 @@ of the project which they work on and are not specific to their business are rel
 ### Fat models must die
 
 The morning session has been closed by [Fat models must die](https://speakerdeck.com/stefanoverna/fat-models-must-die).
-[Ju Liu](http://ark.asengard.net/blog/) and [Stefano Verna](https://twitter.com/steffoz/) took the stage for what has
+[Ju Liu](https://twitter.com/arkh4m) and [Stefano Verna](https://twitter.com/steffoz/) took the stage for what has
 been (in our humble opinion) the *best talk* for this year RubyDay.
 
 They first noted that following the "Fat models, skinny controllers" philosophy often leads to put all the application logic inside
