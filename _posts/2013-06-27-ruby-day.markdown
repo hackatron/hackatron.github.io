@@ -1,0 +1,90 @@
+---
+layout: post
+title: "Third Italian Ruby Day"
+description: Third Italian Ruby Day took place June 14th, 2013 in Milan. Hackatron was there to enjoy the meeting of the italian Ruby community.
+---
+
+The Italian Ruby community organizes an annual meeting: [the italian RubyDay](http://www.rubyday.it).
+This year it was the third edition of the event, held in Milan on June 14th, 2013.
+Two Hackatron's members had been able to attend it and here you find a brief review of the talks and the event in general.
+
+## Talks
+
+The schedule was pretty dense, with two parallel tracks. A lot of attention has been put on software patterns and code design.
+Overall, the talks were interesting and the speakers did a good job in entertaining the audience. 
+
+### A Rails Criticism
+
+The day started with a [critic to Rails](https://speakerdeck.com/jodosha/a-rails-criticism) by [Luca Guidi](https://twitter.com/jodosha).
+
+Luca first highlighted some problems in the choices Rails does for you.
+For example, talking about ActiveRecord, the fact that *Model != Record* (a.k.a. fat models), the common use of implicit API instead
+of implementing a method with an explicit meaning and callbacks abuse (raise your hand if you have never sent an email in an after\_save callback).
+
+Moving to the ActionController world, the main issues are Frankenstein Controllers that commonly violates the simple responsibility principle
+(indeed a controller does routing, via redirect, and are also in charge of rendering pages),
+controllers are odd classes (e.g., you never ever instantiate a controller), use of class variables passed to the views' templates
+which is a clear example of encapsulation violation.
+
+Luca then presented some solutions: decouple logic from AR as much as possible, let public API to
+declare intent, keep AR methods (and accessors) private as much as possible, extract ad-hoc classes with the aim of having skinny controllers and skinny models,
+use presenters and refactor a lot. It's been a really nice talk and Luca is a good presenter.
+
+### Redis and Ruby like a pro
+
+After that it has been the time for [Stefano Fontanelli](https://twitter.com/stefontanelli) to talk
+about [Redis and Ruby](http://www.slideshare.net/sfontanelli/ruby-redis-like-a-pro).
+
+The talk focused on the design of a reliable queue system to manage the process of mining big data. Stefano, which work
+for [Gild](http://www.gild.com), showed how to use Redis's queues to distribute jobs among a set of workers in a reliable fashion:
+his solution involves a processing queue keeping track of jobs being, you guess it, processed so that if a worker die you have a
+way to get back staled processes.
+
+The [backend-toolkit](https://github.com/stefanofontanelli/backend-toolkit) github project implements such a system in Ruby.
+You can find useful concept within that code, for example the implementation of a locking strategy.
+
+In the afternoon [Francesco Laurita](https://twitter.com/flaurita), another guy from Gild,
+had a talk on [rolling your own web crawler](http://www.slideshare.net/francescolaurita/roll-your-own-web-crawler-rubyday) which
+also involved Redis. In this case Redis has been used a way to share memory over TCP/IP. The project presented is on github under the
+name of [polipous](https://github.com/taganaka/polipus) together with other cool projects by Francesco
+which are really worth a mention: [redis-bloomfilter](https://github.com/taganaka/redis-bloomfilter) and [redis-queue](https://github.com/taganaka/redis-queue).
+
+All in all it seems that [Gild](http://www.gild.com) is a really active company in the open source scene: as we get it, a lot
+of the project which they work on and are not specific to their business are released to the community. Well done guys!
+
+### Fat models must die
+
+The morning session has been closed by [Fat models must die](https://speakerdeck.com/stefanoverna/fat-models-must-die).
+Ju Liu and Stefano Verna took the stage for what has been (in our humble opinion) the *best talk* for this year RubyDay.
+
+They first noted that following the "Fat models, skinny controllers" philosophy often leads to put all the application logic inside
+models, which thus become [God objects](http://en.wikipedia.org/wiki/God_object): these are omnipresent and basically own
+too much responsibilities.
+
+Applying the Single Responsiblity Principle to ActiveRecord and ActionController one can state that the first are in charge of
+persisting data to a DB while the latter manage HTTP requests and responses. The latest version of Rails introduced ActiveSupport::Concern
+which is the solution proposed by the core team to have a separation for the application business logic. However, Concerns does
+not avoid run-time God objects (see Ju and Stefano's [slides with note](https://speakerdeck.com/stefanoverna/fat-models-must-die) for all info)
+and also do not favourite composition over inheritance.
+
+The right path is then to apply well-known software design patterns. The speakers show-cased some examples of applying
+Value Object, Command Object, Query Object, Decorator, Presenter and DCI patterns. I really recommend you to review the slides.
+
+Ju and Stefano really did a great presentation, they have been able to keep attention high and not fall us asleep while talking
+of topics which can sometime seems boring (they are not!).
+
+These have been the three talks we enjoyed the most. A particular mention goes also to [Claudio Ortolina](https://twitter.com/cloud8421) and his
+[Cooking lessons with Vim and Tmux](https://speakerdeck.com/cloud8421/cooking-lessons-with-vim-and-tmux) which has been really interesting and full of
+useful advice on Vim (the only real editor out there :P).
+
+## The Event
+
+It is always fun to meet with the other guys of [ruby-it](http://lists.ruby-it.org/mailman/listinfo/ml) and this is
+also really important to make the community grow.
+
+The organizers did a very good job: all attendances had a morning coffee break and lunch included in the ticket (which had the
+really affordable price of 30 euros). The location was also nice, the event had been hosted by University of Milan-Bicocca, and quite easy to reach by public transport.
+If there is one thing missing, it was wifi connection, even if this could have helped us keep attention to the talks.
+
+If you love Ruby and you are Italian (or have the chance to pass by Italy in the right period), be sure to add the
+Italian RubyDay to your list of "don't miss" event: let's make the Italian Ruby community grow!
