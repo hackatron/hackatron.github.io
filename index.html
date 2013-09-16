@@ -47,7 +47,7 @@ description: We're a group of developers, designers, tinkers. We want to have fu
       cache: false,
       url: 'http://hackatron-hubot.herokuapp.com/hubot/topic/hackatron',
       success: function(topic) {
-        $('#next_meeting').html('<h2>' + topic + '</h2>');
+        $('#next_meeting').html('<h2>Next meeting: ' + topic + '</h2>');
       }
     });
   });
