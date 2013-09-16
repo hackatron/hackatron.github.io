@@ -1,12 +1,12 @@
 ---
 layout: post
 title: 'How do I "think in Angular" if I have a jQuery background?'
-description: A staring point to help you to move from the jQuery world to AngularJS.
+description: A starting point to help you to move from the jQuery world to AngularJS.
 ---
 
 [Matteo](https://twitter.com/rosatimatteo) will talk about [**AngularJS**](http://angularjs.org/).
 
-There's a set of logics you apply everyday using jQuery that you must trash in order to enter the frontend frameworks mindset and in particular AngularJS's one. The talk is a staring point to help you to move from the jQuery world to single page application frameworks.
+There's a set of logics you apply everyday using jQuery that you must trash in order to enter the frontend frameworks mindset and in particular AngularJS's one. The talk is a starting point to help you to move from the jQuery world to single page application frameworks.
 
 AngularJS is an open-source JavaScript framework, maintained by Google. From angularjs.org:
 
@@ -18,4 +18,4 @@ Matteo will introduce AngularJS, than with a couple of demos we'll go through bi
 
 We'll dive into real life examples to understand the core concept of **directives**, the common ground between AngularJS and jQuery world.
 
-If you're passionate about frontend development **tomorrow at 6:30 PM at Serra (H-Farm)** you can't miss this event.
+If you're passionate about frontend development **tomorrow at 7:00 PM at Serra (H-Farm)** you can't miss this event.
