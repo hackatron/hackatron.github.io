@@ -26,6 +26,7 @@
   <div id="container">
     <header class="wrapper clearfix">
       <h1 id="title"><a href="/">Hackatron</a></h1>
+      {% include menu.html %}
     </header>
 
     <div id="main" class="wrapper clearfix">
@@ -33,14 +34,7 @@
     </div>
 
     <footer class="wrapper">
-      <nav>
-        <ul class="unstyled">
-          <li><a href="/">Home</a></li>
-          <li><a href="/broadcast.html">Broadcast</a></li>
-          <li><a href="/discussion.html">Discussion</a></li>
-          <li><a href="/about.html">About</a></li>
-        </ul>
-      </nav>
+      {% include menu.html %}
     </footer>
   </div>
 </body>

@@ -184,6 +184,14 @@ div#main {
   clear: both;
 }
 
+header nav {
+  margin-bottom: 40px;
+}
+
+nav * {
+  display: inline;
+}
+
 article header {
   margin-bottom: 20px;
 }
@@ -191,10 +199,6 @@ article header {
 footer {
   margin-top: 40px;
   font-size: 75%;
-}
-
-footer * {
-  display: inline;
 }
 
 ul#people_list {
