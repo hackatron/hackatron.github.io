@@ -19,3 +19,11 @@ Matteo will introduce AngularJS, than with a couple of demos we'll go through bi
 We'll dive into real life examples to understand the core concept of **directives**, the common ground between AngularJS and jQuery world.
 
 If you're passionate about frontend development **tomorrow at 7:00 PM at Serra (H-Farm)** you can't miss this event.
+
+### Update (October 4, 2013)
+
+Resources:
+
+* [http://slid.es/matteorosatidettowyoming/dev-meeting-settembre-2013](http://slid.es/matteorosatidettowyoming/dev-meeting-settembre-2013)
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/rIciCjoLqn4" frameborder="0" allowfullscreen></iframe>
