@@ -1,0 +1,48 @@
+h1 {
+  font-size: 400%;
+}
+
+h1 a {
+  background-position: 0% 60%;
+  padding-left: 120px;
+  padding-right: 0;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+.left {
+  float: left;
+  width: 720px;
+  margin-right: 80px;
+}
+
+.right {
+  float: right;
+  width: 480px;
+}
+
+div#container {
+  background-color: #ff0;
+  margin: 0;
+  width: 1280px;
+  height: 720px;
+  position: relative;
+}
+
+div#when,
+div#where,
+div#who {
+  margin-bottom: 40px;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+footer h1 {
+  margin-bottom: 0;
+}
