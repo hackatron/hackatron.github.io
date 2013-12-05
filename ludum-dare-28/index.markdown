@@ -1,17 +1,19 @@
 ---
 layout: default
-title: Ludum Dare 28
+title: Ludum Dare 28 @ H-Farm
 description: Partecipa alla famigerata Game Jam e crea un video gioco in un weekend.
 language: it
 ---
 
-## Ludum Dare 28
+## Ludum Dare 28 @ H-Farm
 
-Ludum Dare è una Game Jam Online dove persone da tutto il mondo si sfidano nella creazione di un videogioco a tema nell'arco di un week end (48 ore).
+Ludum Dare è una *game jam* dove persone da tutto il mondo si sfidano nella creazione di un videogioco a tema nell'arco di un week end (48 ore).
 
-Alla fine della competizione tutti i partecipanti hanno tre settimane per giocare e votare i giochi degli altri concorrenti. Dopo queste tre settimane vengono annunciati i vincitori.
+Hackatron per l'occasione sta organizzando un evento per tutti quelli che vogliono partecipare alla competizione in compagnia nella ridente campagna trevigiana in una location d'eccezione: H-Farm.
 
-Per partecipare al Ludum Dare 28 iscriviti su [http://ludum-dare-28.eventbrite.com](http://ludum-dare-28.eventbrite.com).
+**Per partecipare all'evento iscriviti subito su [http://ludum-dare-28.eventbrite.com](http://ludum-dare-28.eventbrite.com)!**
+
+![Ludum Dare 28 @ H-Farm](/images/ludum-dare-28.jpg)
 
 L'evento si divide in due categorie: *Competition* e *Jam*.
 
@@ -27,6 +29,8 @@ Le regole principali per la Competition sono:
 Nella Jam si applicano le stesse regole della Competition, ma potrai lavorare in team e hai un giorno in più per sviluppare il tuo gioco (72 ore).
 
 Nota per chi sceglie di parteciare alla Jam: per motivi logistici non è possibile stare in H-Farm anche lunedì.
+
+Per maggiori informazioni sulla competizione vai sul sito ufficiale [http://www.ludumdare.com/compo/](http://www.ludumdare.com/compo/).
 
 ## Dove
 
