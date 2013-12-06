@@ -21,7 +21,21 @@
 
 <body>
   <div id="container">
-    {{ content }}
+    <div id="banner">
+      <header class="wrapper clearfix">
+        <h1>{{ page.title }}</h1>
+      </header>
+
+      <div class="wrapper clearfix">
+        <div class="block">
+          {{ content }}
+        </div>
+      </div>
+
+      <footer class="wrapper">
+        <h1 id="title"><a href="/">Hackatron</a></h1>
+      </footer>
+    </div>
   </div>
 
   <script type="text/javascript">
