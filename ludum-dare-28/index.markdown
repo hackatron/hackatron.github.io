@@ -13,6 +13,8 @@ Hackatron per l'occasione sta organizzando un evento per tutti quelli che voglio
 
 **Per partecipare all'evento iscriviti subito su [http://ludum-dare-28.eventbrite.com](http://ludum-dare-28.eventbrite.com)!**
 
+<iframe  src="http://www.eventbrite.com/tickets-external?eid=9633842081&ref=etckt&v=2" frameborder="0" height="214" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
+
 ![Ludum Dare 28 @ H-Farm](/images/ludum-dare-28.jpg)
 
 L'evento si divide in due categorie: *Competition* e *Jam*.
