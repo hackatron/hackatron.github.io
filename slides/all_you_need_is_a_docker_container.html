@@ -52,158 +52,30 @@
 					</p>
 				</section>
 
-				<!-- Example of nested vertical slides -->
 				<section>
-					<h2>Fight agains specificity wars</h2>
-					<p>"Specificity is a type of weighting that has a bearing on how your cascading style sheet (CSS) rules are displayed"</p>
-					<p>Add 1 for each element and pseudo-element, add 10 for each attribute, class and pseudo-class, add 100 for each ID; and add 1000 for an inline style.</p>
+					<h2>Hands-on NOW! OSX</h2>
 					<p>
 						<ul>
-							<li>p.note: 1 class + 1 element = 11</li>
-							<li>#sidebar p[lang="en"] 1 ID + 1 attribute + 1 element = 111</li>
-							<li>body #main .post ul li:last-child 1 ID + 1 class + 1 pseudo-class + 3 elements = 123</li>
+							<li>TODO</li>
 						</ul>
 					</p>
 				</section>
 
 				<section>
-					<h1> Two Main Principles</h1>
-					<h2>SEPARATE STRUCTURE AND SKIN</h2>
-					<h2>SEPARATE CONTAINER AND CONTENT</h2>
-				</section>
-
-				<section>
-					<h2>Separate Structure and Skin</h2>
+					<h2>Hands-on NOW! Linux</h2>
 					<p>
-						Abstract the structure of the block from the skin which is being applied
-					</p>
-				</section>
-
-				<section>
-					<h2>Before</h2>
-					<pre><code contenteditable>
-#button {
-	width: 200px;
-	height: 50px;
-	padding: 10px;
-	border: solid 1px #ccc;
-	background: linear-gradient(#ccc, #222);
-	box-shadow: rgba(0, 0, 0, .5) 2px 2px 5px;
-}
-
-#box {
-	width: 400px;
-	overflow: hidden;
-	border: solid 1px #ccc;
-	background: linear-gradient(#ccc, #222);
-	box-shadow: rgba(0, 0, 0, .5) 2px 2px 5px;
-}
-
-#widget {
-	width: 500px;
-	min-height: 200px;
-	overflow: auto;
-	border: solid 1px #ccc;
-	background: linear-gradient(#ccc, #222);
-	box-shadow: rgba(0, 0, 0, .5) 2px 2px 5px;
-}
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>After</h2>
-					<pre><code contenteditable>
-.button {
-	width: 200px;
-	height: 50px;
-}
-
-.box {
-	width: 400px;
-	overflow: hidden;
-}
-
-.widget {
-	width: 500px;
-	min-height: 200px;
-	overflow: auto;
-}
-
-.skin {
-	border: solid 1px #ccc;
-	background: linear-gradient(#ccc, #222);
-	box-shadow: rgba(0, 0, 0, .5) 2px 2px 5px;
-}
-									</code></pre>
-								</section>
-
-
-				<section>
-					<h2>Separate Container and Content</h2>
-					<p>
-						Break the dependency between the container module and the container objects it contains
-					</p>
-				</section>
-
-				<section>
-					<h2>10 Best Practise</h2>
-					<ol>
-						<li>Create a component library</li>
-						<li>Use consistent semantic Style</li>
-						<li>Design Modules to be transparent on the inside</li>
-						<li>Be Flexible</li>
-						<li>Learn to love grids</li>
-						<li>Minimize Selectors</li>
-						<li>Separate Structure and skin</li>
-						<li>Separete Container and content</li>
-						<li>Extend object by applkying multiple class on elemnt</li>
-						<li>Use reset and fonts from YUI</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Pitfalls</h2>
-					<ol>
-						<li>Location dependent styles (#sidebar h3)</li>
-						<li>Avoid specifying what tag a class applies (#sidebar.left)</li>
-						<li>Avoid IDs to style inside the main content areas (#container #content .titolo)</li>
-						<li>Redundancy</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Pro &amp; Cons</h2><br/>
-					<p>
-						<h3>Pro</h3>
 						<ul>
-							<li>Better Maintenably of Code</li>
-							<li>Better Performance</li>
-							<li>Consistent Design</li>
-						</ul>
-					</p>
-					<p>
-						<h3>Cons</h3>
-						<ul>
-							<li>Greater Effort on writing Css</li>
+							<li>TODO</li>
 						</ul>
 					</p>
 				</section>
 
-				<section>
-					<h2>Real Example</h2>
-					<h3>Facebook Feed</h3>
-					<p>CSS Reduced by 19%<br/>
-					HTML Reduced of 50%</p>
-				</section>
 
-				<section>
-					<h2>Tools to the rescue</h2>
-					<p>Css Preprocessor like SASS [Mixins and Extend]</p>
-					<p>CSS Frameworks based on OOCSS Approach<br/><br/>
+        <section>
+					<h2>Fig: ONE command away from a running environment</h2>
+					<p>
 						<ul>
-							<li><a href="http://foundation.zurb.com/">Foundation</a></li>
-							<lI><a href="http://twitter.github.com/bootstrap/">Bootstrap</a></li>
-							<li><a href="https://github.com/csswizardry/inuit.css">Intuit Css</a></li>
+							<li>TODO</li>
 						</ul>
 					</p>
 				</section>
@@ -211,12 +83,7 @@
 				<section>
 					<h2>Resources</h2>
 					<ul>
-						<li><a href="https://github.com/stubbornella/oocss/wiki">Object Oriented CSS GitHub Project</a></li>
-						<li><a href="http://www.slideshare.net/stubbornella/our-best-practices-are-killing-us">Our Best Practices are killing us</a></li>
-						<li><a href="http://www.slideshare.net/stubbornella/object-oriented-css">Object Oriented CSS</a></li>
-						<li><a href="http://coding.smashingmagazine.com/2010/04/07/css-specificity-and-inheritance/">CSS Specificity And Inheritance</a></li>
-						<li><a href="http://coding.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/">CSS Specificity: Things You Should Know</a></li>
-						<li><a href="https://www.facebook.com/note.php?note_id=307069903919">Making Facebook 2x Faster</a></li>
+						<li><a href="https://www.docker.com/">Docker HomePage</a></li>
 				</section>
 
 				<section>
