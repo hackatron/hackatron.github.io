@@ -27,6 +27,15 @@
 		<!--[if lt IE 9]>
 		<script src="../reveal.js/lib/js/html5shiv.js"></script>
 		<![endif]-->
+		
+		<style>
+			.top50{
+				margin-top: 50px !important;
+			}
+			.color-strong {
+				color: #F14C4C;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -37,13 +46,35 @@
 			<div class="slides">
 
 				<section>
-					<h1>All you need is a Docker Container</h1>
+					<h1>All you need is ... <br /> a Docker Container !</h1>
+				</section>
+				
+				<section>
+					<h2>What is Docker?</h2>
+					<p>
+						Docker is virtualization software
+					</p>
+					<br/>
+					<p>
+						It uses features provided by Linux kernel, likes cgroups and Namespaces, to isolate <b>Applications</b>
+					</p>
+					<br />
+					<p>
+						<blockquote>
+							Faster delivery of your applications
+						</blockquote>
+					</p>
+					<br />
+					<br />
+					<p class="fragment" >
+						Ok but... it's like a Virtual Machine!
+					</p>
 				</section>
 
 				<section>
 					<h2>Why Docker?</h2>
 					<p>
-						Virtual machines suck?<br/> a bit. <br/><br/>
+						Virtual machines suck?<br/> a bit <br/><br/>
 						<ul>
 							<li>CPU and RAM hungry</li>
 							<li>Not really maintenable</li>
@@ -51,12 +82,73 @@
 						</ul>
 					</p>
 				</section>
+				
+				<section>
+					<section>
+						<h2>Virtual Machine Work flow</h2>
+						<p>
+							I need to test/develop my App in XYZ environment
+							<ol>
+								<li class="fragment">Choose a distro</li>
+								<li class="fragment">Set all hardware stuff for the virtual machine (ram, hd, network, ...)</li>
+								<li class="fragment">Install an entire OS</li>
+								<li class="fragment">Configure OS (port forwarding, shared folder, ...)</li>
+								<li class="fragment">Install applications for the environment</li>
+								<li class="fragment">Configure applications </li>
+								<li class="fragment">Do they work at the first time?</li>
+								<li class="fragment">Configure applications part 2</li>
+								<li class="fragment">And finally... Test your App!</li>
+							</ol>
+						</p>
+						<br />
+						<p class="fragment color-strong">
+							And if I want to test in a XY.. &beta; environment ??
+						</p>
+					</section>
+					<section>
+						<h2>Docker is different</h2>
+						<p>
+							Same App in XYZ environment
+							<ol>
+								<li class="fragment">Download (o create) <i>images</i> which contains X, Y, Z  (one application for image) </li>
+								<li class="fragment">Create <i>containers</i> from the images</li>
+								<li class="fragment">Connect and Run X, Y, Z <i>containers</i></li>
+								<li class="fragment">Test your App!</li>
+							</ol>
+						</p>
+						<br />
+						<p class="fragment">
+							<span class="color-strong">And if I want to test in a XY.. &beta; environment ??</span>
+							<ol class="fragment">
+								<li>Download (o create) image which contains &beta;</li>
+								<li>Create container from the image</li>
+								<li>Connect and Run X, Y, &beta; <i>containers</i></li>
+								<li>Test your App!</li>
+							</ol>
+						</p>
+						<br />
+						<h3 class="fragment ">It seems to easy...</h3>
+					</section>
+				</section>
 
 				<section>
 					<h2>Hands-on NOW! OSX</h2>
 					<p>
 						<ul>
-							<li>TODO</li>
+							<li>Donwoload Boot2Docker from http://boot2docker.io/</li>
+							<li>
+								Open a Terminal and run
+								<pre><code data-trim contenteditable>
+$ boot2docker init
+$ boot2docker start
+$ $(boot2docker shellinit)
+									</code></pre>
+							</li>
+							<li> Have a fun with Docker!
+								<pre><code>
+$ docker run --rm -v "$(pwd)":/pippo ubuntu:trusty  ls pippo
+									</code></pre>
+							</li>
 						</ul>
 					</p>
 				</section>
@@ -64,20 +156,65 @@
 				<section>
 					<h2>Hands-on NOW! Linux</h2>
 					<p>
-						<ul>
-							<li>TODO</li>
+						<ul style="width:700px">
+							<li>Depends of your distro:</li>
+							<li>
+								Debian
+								<pre><code data-trim contenteditable>
+$ sudo apt-get update
+$ sudo apt-get install docker.io
+								</code></pre>
+							</li>
+							<li>
+								ArchLinux
+								<pre><code data-trim contenteditable>
+$ sudo pacman -S docker
+$ sudo systemctl start docker #for start docker
+								</code></pre>
+							</li>
+							<li>
+								Ubuntu
+								<pre><code data-trim contenteditable>
+$ curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+								</code></pre>
+							</li>
 						</ul>
 					</p>
+					<p>
+						Have a fun with Docker!
+								<pre><code>
+$ docker run --rm -v "$(pwd)":/pippo ubuntu:trusty  ls pippo
+									</code></pre>
+					</p>
+				</section>
+				
+				<section>
+					<h2>Under the Hood</h2>
+					<p>qui spiego cosa succede</p>
+				</section>
+				
+				<section>
+					<h2>Some Example</h2>
+					<p>qui mostro alcuni esempi per far vedere un po di parametri (collegare) due container</p>
 				</section>
 
+				<section>
+					<h2>DockerFile</h2>
+					<p>i comandi un dockerfile</p>
+				</section>
 
-        <section>
+				<section>
 					<h2>Fig: ONE command away from a running environment</h2>
 					<p>
 						<ul>
 							<li>TODO</li>
 						</ul>
 					</p>
+				</section>
+				
+				<section>
+					<h2>From a Project</h2>
+					<p>Qui si fa l'esempio preso da un progetto serio</p>
 				</section>
 
 				<section>
