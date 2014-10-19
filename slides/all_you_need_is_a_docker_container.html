@@ -44,7 +44,7 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-
+				
 				<section>
 					<h1>All you need is ... <br /> a Docker Container !</h1>
 				</section>
@@ -142,6 +142,9 @@
 $ boot2docker init
 $ boot2docker start
 $ $(boot2docker shellinit)
+
+# useful tip
+$ echo $(boot2docker ip) dockerhost | sudo tee -a /etc/hosts
 									</code></pre>
 							</li>
 							<li> Have a fun with Docker!
@@ -189,18 +192,236 @@ $ docker run --rm -v "$(pwd)":/pippo ubuntu:trusty  ls pippo
 				</section>
 				
 				<section>
-					<h2>Under the Hood</h2>
-					<p>qui spiego cosa succede</p>
+					<h2>What we just did?</h2>
+					<pre><code>
+$ docker run --rm -v "$(pwd)":/pippo ubuntu:trusty  ls pippo
+									</code></pre>
+					<p>
+						We tell docker to do:
+						<ul>
+							<li>
+								Launch a command inside the container
+								<pre><code>ls pippo</code></pre>
+							</li>
+							<li>
+								Use a specific ubuntu version (if not locally present, it'll be downloaded)
+								<pre><code>ubuntu:trusty</code></pre>
+							</li>
+							<li>
+								Share current folder, and mount the folder inside the container (RW) at path /pippo
+								<pre><code>-v "$(pwd)":/pippo</code></pre>
+							</li>
+							<li>
+								After command executing, delete the container
+								<pre><code>--rm</code></pre>
+							</li>
+							<li>
+								Last command... run this thing!
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<section>
+						<h2>More options, more fun!</h2>
+						<p>
+							<pre><code>docker run -t -i ubuntu:14.04 /bin/bash</code></pre>
+							<ul>
+								<li>-t : pseudo-tty or terminal inside container</li>
+								<li>-i : make an interactive connection</li>
+							</ul>
+						</p>
+						<p>
+							<pre><code>docker run -d -P --name web training/webapp python app.py</code></pre>
+							<ul>
+								<li>-d : run the container in the background</li>
+								<li>-P : map network ports inside our container to our host</li>
+								<li>or -p 5000:5000 : map port 5000 inside our container to port 5000 on our local host</li>
+								<li>--name web : set container name</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>Manage Images e Containers</h2>
+						<p>
+							<pre><code data-trim contenteditable>
+# List all downloaded images
+$ docker images
+
+# Delete images
+docker rmi <i>image_name</i></code></pre>
+							<pre><code data-trim contenteditable>
+# List all containers
+$ docker ps -a
+# -a : show all containers (running and stopped)
+
+# Delete containers
+$ docker rm <i>container_name</i>
+
+# Start a container
+$ docker start <i>container_name</i>
+
+# Attach to a container
+docker attach <i>container_name</i>
+</code></pre>
+						</p>
+					</section>					
 				</section>
 				
 				<section>
-					<h2>Some Example</h2>
-					<p>qui mostro alcuni esempi per far vedere un po di parametri (collegare) due container</p>
+					<section>
+						<h2>Under the Hood</h2>
+						<p >
+							Docker is made of:
+							<ul>
+								<li class="fragment"><i><b>Layers</b></i> : read-only or read-write file system</li>
+								<li class="fragment"><i><b>Images</b></i> : read-only Layer. An image can be a result of multiple (read-only) layers stacked on top of each other</li>
+								<li class="fragment"><i><b>Containers</b></i> : process launched inside a read-write layer on top of all read-only layer </li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>Debian image</h2>
+						<img height="500"  src="https://docs.docker.com/terms/images/docker-filesystems-debian.png" alt="debian image">
+					</section>
+					<section>
+						<h2>Container over Debian Image</h2>
+						<img height="500"  src="https://docs.docker.com/terms/images/docker-filesystems-debianrw.png" alt="container over debian image">
+					</section>
+					<section>
+						<h2>Container stacked layer</h2>
+						<img height="500" src="https://docs.docker.com/terms/images/docker-filesystems-multilayer.png" alt="container multylayer">
+						<p>
+							You can commit your modification inside an image using:
+							<pre><code>docker commit -m="Added some gem" -a="Cris" <i>id_container</i> <i>new_name_image</i>:<i>version</i></code></pre>
+						</p>
+					</section>
+				</section>
+				
+				
+				<section>
+					<h2>Cool stuff: Linking container</h2>
+					<p>
+						<pre><code>
+$ docker run -d --name db training/postgres
+$ docker run -d -P --name web --link db:db training/webapp python app.py
+# option --link name:alias
+</code></pre>
+					</p>
+					<p>
+						<i>"db"</i> container expose port 5432 which is automatically connected to <i>"web"</i> container
+					</p>
+					<br />
+					<p>
+						Docker exposes connectivity information for the source to the recipient using :
+						<ul>
+							<li>Environment variables</li>
+							<li>Updating the <i>/etc/hosts</i> file</li>
+						</ul>
+					</p>
+					<br />
+					<p>
+						You can use this variables inside your applications
+					</p>
+				</section>
+				
+				<section>
+					<h2>Cool stuff: Data Volumes</h2>
+					<p>
+						Useful to persist or share data
+						<pre><code>
+$ docker run -ti --name keep_data -v /pippo busybox
+# create a new volume inside container
+
+$ docker run -ti --name keep_data -v /src/webapp:/pippo:ro busybox
+# mount <i>/src/webapp</i> inside a container but read-only
+</code></pre>
+					</p>
+					<p>
+						Share Data Volumes
+						<pre><code>
+$ docker run -ti --name db_vol -v /var/lib/mysql busybox
+# create a new volume inside container
+
+$ docker run -d --volumes-from db_vol --name mysql_1 -p 3306:3306 tutum/mysql
+# mount <i>/var/lib/mysql</i> inside container <i>mysql_1</i>
+						</code></pre>
+					</p>
 				</section>
 
 				<section>
-					<h2>DockerFile</h2>
-					<p>i comandi un dockerfile</p>
+					<section>
+						<h2>DockerFile: make images portable</h2>
+					<p>
+						You can define a <i>Dockerfile</i> where inside there is all command for create an image
+					</p>
+					<p class="fragment">
+						In Dockerfile you can:
+						<ul class="fragment">
+							<li>define your base image</li>
+							<li>set environment variables</li>
+							<li>run command for install/edit image configuration</li>
+							<li>add file from host to image</li>
+							<li>set volumes</li>
+							<li>expose application ports</li>
+						</ul>
+					</p>
+					<br />
+					<p class="fragment" >
+						Create the image with command
+						<pre class="fragment" ><code>
+$ docker build -t="myuser/myapp:v1" .
+# inside the directory where there is Dockerfile
+						</code></pre>
+					</p>
+					</section>
+					<section>
+						<p>
+							An Example
+							<pre><code>
+# random instructions!!
+
+FROM ubuntu:trusty
+MAINTAINER Tony, Bepi
+
+# Install packages
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update && \
+  apt-get -yq install mysql-server-5.6 pwgen && \
+  rm -rf /var/lib/apt/lists/*
+
+# Install other packages
+ENV VERSION 4.7.2
+ENV APP app-$VERSION
+RUN curl --retry 3 http://example.com/$VERSION/$APP.tgz > /opt/$APP.tgz
+RUN tar -C /opt --extract --file /opt/$APP.tgz
+RUN mv /opt/$APP /opt/my_app
+
+# Add scripts
+ADD run.sh /run.sh
+RUN chmod 755 /*.sh
+
+# Add VOLUMEs to allow backup of config and databases
+VOLUME  ["/etc/mysql", "/var/lib/mysql"]
+
+# Add a user
+RUN useradd --home-dir /opt/my_app --comment "my_app Server" custom_user
+RUN chown -R custom_user:custom_user /opt/my_app/example
+
+# user when container is up
+USER custom_user
+
+EXPOSE 3306
+CMD ["/run.sh"]
+#WORKDIR /opt/my_app
+#CMD ["java", "-jar", "start.jar"]
+
+							</code></pre>
+						</p>
+						<p class="fragment" >
+							It's ok... but could be better!
+						</p>
+					</section>
 				</section>
 
 				<section>
