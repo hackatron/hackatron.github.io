@@ -228,7 +228,7 @@ $ docker run --rm -v "$(pwd)":/pippo ubuntu:trusty  ls pippo
 							<pre><code>docker run -t -i ubuntu:14.04 /bin/bash</code></pre>
 							<ul>
 								<li>-t : pseudo-tty or terminal inside container</li>
-								<li>-i : make an interactive connection</li>
+								<li>-i : use <i>STDIN</i> for inteact with container</li>
 							</ul>
 						</p>
 						<p>
@@ -353,7 +353,7 @@ $ docker run -d --volumes-from db_vol --name mysql_1 -p 3306:3306 tutum/mysql
 					<section>
 						<h2>DockerFile: make images portable</h2>
 					<p>
-						You can define a <i>Dockerfile</i> where inside there is all command for create an image
+						You can define a <i>Dockerfile</i> where inside there is all commands for create an image
 					</p>
 					<p class="fragment">
 						In Dockerfile you can:
@@ -430,42 +430,92 @@ CMD ["/run.sh"]
 						<a href="https://hub.docker.com/" >Docker Hub</a> is a remote repository<br />
 						where you can find (public) images and you can commit your images for share with other user!
 					</p>
-					<br />
 					<p>
 						You can create and share images privately with your organization
 					</p>
 					<br />
 					<p>
-						You can use this command:
 						<pre><code>
 $ docker search <i>ruby</i>
 # search for images tagged "ruby"
 
 $ docker pull <i>rails</i>
 # download the "rails" images
+
+$ docker commit -m "Added package <i>&beta;</i> " <i>id_container</i> <i>new_name_image</i>:<i>version</i>
+# add a new package
+
+$ docker push <i>new_name_image</i>:<i>version</i>
+# push image to docker hub
 						</code></pre>
 					</p>
 					<br />
 				</section>
 
 				<section>
-					<h2>Fig: ONE command away from a running environment</h2>
+					<section>
+						<h2>Fig: ONE command away from a running environment</h2>
 					<p>
-						<ul>
-							<li>TODO</li>
-						</ul>
+						Fig let you to define all the containers <br />for your application in one file
+						<pre><code>
+dbvol:
+    image: busybox
+    volumes:
+        - /var/lib/mysql
+
+mysql:
+    build: docker/mysql
+    volumes_from:
+        - dbvol
+    ports:
+        - "3306:3306"
+
+phpapache:
+    build: docker/apache_php
+    volumes:
+        - .:/app
+    ports:
+        - "8080:80"
+    links:
+        - mysql:mysql
+						</code></pre>
+					</p>
+					</section>
+					<section>
+						<p>
+							Inside the directory run
+							<pre><code>
+$ fig up
+# build, (re)create, start and attach to containers for a service.
+
+							</code></pre>
+						</p>
+						<br />
+						<p>
+							Fig is still young tool <br />
+							It'll be part of docker from the next release
+						</p>
+					</section>
+				</section>
+				
+				<section>
+					<h2>It's time to test!</h2>
+					<p>
+						Test docker in your workflow
+					</p>
+					<br />
+					<p>
+						Discuss, create Dockerfile, and share knowledge
 					</p>
 				</section>
 				
 				<section>
-					<h2>From a Project</h2>
-					<p>Qui si fa l'esempio preso da un progetto serio</p>
-				</section>
-
-				<section>
 					<h2>Resources</h2>
 					<ul>
 						<li><a href="https://www.docker.com/">Docker HomePage</a></li>
+						<li><a href="https://hub.docker.com/" >Docker Hub</a></li>
+						<li><a href="http://blog.docker.com/docker-weekly-archives/">Docker Weekly Archives</a></li>
+						<li><a href="http://www.fig.sh/" >Fig</a></li>
 				</section>
 
 				<section>
@@ -488,6 +538,9 @@ $ docker pull <i>rails</i>
 				progress: true,
 				history: true,
 				center: true,
+				
+				//~ minScale: 0.1,
+				maxScale: 0.8,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
