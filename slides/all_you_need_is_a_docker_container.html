@@ -52,7 +52,7 @@
 				<section>
 					<h2>What is Docker?</h2>
 					<p>
-						Docker is virtualization software
+						Docker is a virtualization software
 					</p>
 					<br/>
 					<p>
@@ -110,7 +110,7 @@
 						<p>
 							Same App in XYZ environment
 							<ol>
-								<li class="fragment">Download (o create) <i>images</i> which contains X, Y, Z  (one application for image) </li>
+								<li class="fragment">Download (o create) <i>images</i> which contain X, Y, Z  (one application for image) </li>
 								<li class="fragment">Create <i>containers</i> from the images</li>
 								<li class="fragment">Connect and Run X, Y, Z <i>containers</i></li>
 								<li class="fragment">Test your App!</li>
@@ -120,14 +120,14 @@
 						<p class="fragment">
 							<span class="color-strong">And if I want to test in a XY.. &beta; environment ??</span>
 							<ol class="fragment">
-								<li>Download (o create) image which contains &beta;</li>
+								<li>Download (o create) image which contain &beta;</li>
 								<li>Create container from the image</li>
 								<li>Connect and Run X, Y, &beta; <i>containers</i></li>
 								<li>Test your App!</li>
 							</ol>
 						</p>
 						<br />
-						<h3 class="fragment ">It seems to easy...</h3>
+						<h3 class="fragment ">It seems to be easy...</h3>
 					</section>
 				</section>
 
@@ -135,7 +135,7 @@
 					<h2>Hands-on NOW! OSX</h2>
 					<p>
 						<ul>
-							<li>Donwoload Boot2Docker from http://boot2docker.io/</li>
+							<li>Download Boot2Docker from http://boot2docker.io/</li>
 							<li>
 								Open a Terminal and run
 								<pre><code data-trim contenteditable>
@@ -242,7 +242,7 @@ $ docker run --rm -v "$(pwd)":/pippo ubuntu:trusty  ls pippo
 						</p>
 					</section>
 					<section>
-						<h2>Manage Images e Containers</h2>
+						<h2>Manage Images and Containers</h2>
 						<p>
 							<pre><code data-trim contenteditable>
 # List all downloaded images
@@ -309,7 +309,7 @@ $ docker run -d -P --name web --link db:db training/webapp python app.py
 </code></pre>
 					</p>
 					<p>
-						<i>"db"</i> container expose port 5432 which is automatically connected to <i>"web"</i> container
+						<i>"db"</i> container exposes port 5432 which is automatically connected to <i>"web"</i> container
 					</p>
 					<br />
 					<p>
@@ -321,7 +321,7 @@ $ docker run -d -P --name web --link db:db training/webapp python app.py
 					</p>
 					<br />
 					<p>
-						You can use this variables inside your applications
+						You can use these variables inside your applications
 					</p>
 				</section>
 				
@@ -353,7 +353,7 @@ $ docker run -d --volumes-from db_vol --name mysql_1 -p 3306:3306 tutum/mysql
 					<section>
 						<h2>DockerFile: make images portable</h2>
 					<p>
-						You can define a <i>Dockerfile</i> where inside there is all commands for create an image
+						You can define a <i>Dockerfile</i> where inside there are all the commands you need to create an image
 					</p>
 					<p class="fragment">
 						In Dockerfile you can:
@@ -428,7 +428,7 @@ CMD ["/run.sh"]
 					<h2>Docker Hub</h2>
 					<p>
 						<a href="https://hub.docker.com/" >Docker Hub</a> is a remote repository<br />
-						where you can find (public) images and you can commit your images for share with other user!
+						where you can find (public) images and you can commit your images in order to share with another user!
 					</p>
 					<p>
 						You can create and share images privately with your organization
@@ -492,7 +492,7 @@ $ fig up
 						</p>
 						<br />
 						<p>
-							Fig is still young tool <br />
+							Fig is still a young tool <br />
 							It'll be part of docker from the next release
 						</p>
 					</section>
