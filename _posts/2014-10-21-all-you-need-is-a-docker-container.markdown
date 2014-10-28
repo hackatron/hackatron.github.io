@@ -4,7 +4,7 @@ title: All you need is... a Docker Container
 description: Cristian and Nicola want to draw the attention to a new tool for software development and production introducing Docker container.
 ---
 
-It's really necessary a whole VM for your workflow development needs ? Or all you need is a bounce of Applications ?
+Is it really necessary a whole VM for your workflow development needs ? Or all you need is a bounce of Applications ?
 
 Containers exist from a long time, and they isolate applications, creating a read-write layer over a read-only file system.
 [Docker](https://www.docker.com/) makes these things very simple.
