@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>reveal.js - The HTML Presentation Framework</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+              var link = document.createElement( 'link' );
+              link.rel = 'stylesheet';
+              link.type = 'text/css';
+              link.href = 'css/print/pdf.css';
+              document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section data-transition="slide">
+          <h1>Monads, Monads Everywhere!</h1>
+          <h2><small>A puzzling journey inside Haskell Republic</small></h2>
+        </section>
+        <section data-transition="slide">
+          <h3>What the hack is Haskell and why should I use it?</h3>
+        </section>
+        <section>
+          <h3>Haskell is:</h3>
+          <p class="fragment">
+            a <b>strongly typed</b> functional programming language 
+          </p>
+          <p class="fragment">
+            with <b>polimorphic</b> types
+          </p>
+          <p class="fragment">
+            based on the <b>simply typed lambda calculus</b>
+          </p>
+          <p class="fragment">
+            with <b>automatic</b> type inference and checking 
+          </p>
+          <p class="fragment">
+            and <b>no side effects</b>
+          </p>
+        </section>
+        <section>
+          <h3>And so?</h3>
+          <p class="fragment">
+            If it compiles it just works 
+          </p>
+          <p class="fragment">
+            No side effects means safety
+          </p>
+          <p class="fragment">
+            Functional programming allows you to stay high level
+          </p>
+          <p class="fragment">
+            enhancing good design patterns by default
+          </p>
+          <p class="fragment">
+            and making easy hard things (e.g. Quickcheck, Pandoc, xmonad)
+          </p>
+        </section>
+        <section data-transition="slide">
+          <h3>What has been used for?</h3>
+          <p class="fragment">
+            Embedded languages as <a href="http://ivorylang.org">Ivory</a> and programmin languages as <a href="http://idris-lang.org">Idris</a>
+          </p>
+          <p class="fragment">
+            Embedded systems as <a href="http://smaccmpilot.org/">UAVs software</a>
+          </p>
+          <p class="fragment">
+            Compilers
+          </p>
+          <p class="fragment">
+            Type-safe Web Frameworks as <a href="http://www.yesodweb.com">Yesod</a>
+          </p>
+          <p class="fragment">
+            Type-safe database management as in <a href="https://hackage.haskell.org/package/persistent">Persistent</a> 
+          </p>
+        </section>
+        <section data-transition="slide">
+          <h3>But no one use it in production!</h3>
+          <h3 class="fragment">quite false...</h3>
+        </section>
+          <section data-transition="slide">
+            <h3>It's used by:</h3>
+            <ol>
+              <li class="fragment">
+                <b>DARPA</b> in two projects: High-Assurance Cyber Military Systems (HACMS) and Clean-slate design of Resilient, Adaptive, Secure Hosts (CRASH)
+              </li>
+              <li class="fragment">
+                <b>Google</b> in internal projects and published Ganeti, a cluster virtual server management software  
+              </li>    
+              <li class="fragment">
+                <b>Facebook</b> for data management (check <a href="https://github.com/facebook/Haxl">Haxl</a>) and PHP manipulation (<a href="https://github.com/facebookarchive/lex-pass">lex-pass</a>)
+              </li>
+            <li class="fragment">
+              <b>AT&amp;T</b> for network security
+            </li>
+            <li class="fragment">
+              many financial institutions (Allston Trading, <b>Tsuru Capital</b>, <b>Deutsche Bank</b> for trading)
+            </li>
+            <li class="fragment">
+              some startups (Better, <b>MailRank</b> has been acquired by Facebook, Chordify, CircuitHub, Fynder)
+            </li>
+          </ol>
+        </section>
+        <section data-transition="slide">
+          <h3>Cool, but how you code in Haskell?<h3> 
+        </section>
+        <section data-transition="slide">
+          <h3>Let's start with the basics..</h3> 
+        </section>
+        <section>
+          <section>
+            <h3>Functions</h3>
+            <p>You define functions like this:</p>
+            
+            <pre><code>
+            {-| foo is a function without type signature
+                x and y are its variables
+                the compiler will rise an exception when
+                the function will be invoked with uncomparable
+                variables
+            -}
+            foo x y = if x > y then x else y
+
+            -- bar is a function with type signature
+            -- and a safe interface to foo
+            bar :: Int -> Int -> Bool
+            bar x y = foo x y
+            </code></pre>
+          </section>
+          <section>
+            <p>You bind local variables with `let... in`</p>
+            <pre><code>
+              foobar :: Float -> Float -> Float
+              foobar x y = 
+                let z = cos x 
+                in z*x*y 
+            </code></pre>
+          </section>
+          <section>
+            <p>or where</p>
+            <pre><code>
+              foobar :: Double -> Double -> Double
+              foobar x y = z*x*y
+                where
+                  z = cos x
+            </code></pre>
+          </section>
+          <section>
+            <p>recursive functions with pattern matching</p>
+            <pre><code>
+              fact n =
+                | n == 0 = 0
+                | otherwise = n * (fact n - 1)
+            </code></pre>
+          </section>
+          <section>
+            <p>Overloaded functions</p>
+            <pre><code>
+              map f [] = []
+              map f x:xs = f x : map f xs
+            </code></pre>
+          </section>
+          <section>
+            <p>Pattern matching with case</p>
+            <pre><code>
+              map f l = case l of
+                ([]) -> []
+                (x:xs) -> f x : map xs
+            </code></pre>
+            <p> or with guards</p>
+            <pre><code>
+              filter p [] = []
+              filter p (x:xs) =
+                | p y = y : filter p ys
+                | otherwise = filter p ys
+            </code></pre>
+          </section>
+          <section>
+            <p>Lambda expressions</p>
+            <pre><code>
+              -- takes a variable a and return
+              -- the application of f on a
+              fun f = \a -> f a
+            </code></pre>
+          </section>
+        </section>
+        </section>
+        <section data-transition="slide">
+          <section>
+            <h3>Types</h3>
+            <br>
+            <p>You can define different kind of types:<br></p>
+            <p>product types are n-uples</p>
+            <pre><code>
+              data Phone = Phone Vendor OS
+            </code></pre>
+            <p>sum types are enumerations</p>
+            <pre><code>
+              data OS = Android | IOs
+            </code></pre>
+            <p>datatypes are aliased types</p>
+            <pre><code>
+              datatype Vendor = String
+            </code></pre>
+          </section>
+          <section>
+            <p>Polymorphic types</p>
+            <pre><code>
+              data Maybe a = Just a | Nothing
+              data Either a b = Left a | Right b
+            </code></pre>
+          </section>
+          <section>
+            <p>Pattern matching types</p>
+            <pre><code>
+              maybeDouble :: (a :: Maybe Numeric) => a -> a
+              maybeDouble x =
+                | Just k -> Just (k*2)
+                | otherwise -> Nothing
+            </code></pre>
+          </section>
+        </section>
+        <section data-transition="slide">
+          <h3>And now the advanced stuff</h3>   
+        </section>
+        <section data-transition="slide">
+          <section>
+            <h3>Monoids</h3>
+            <pre><code>
+              class Monoid a where
+                -- the identity element
+                mempty :: a
+                -- the associative operation (+, *, etc)
+                mappend :: a -> a -> a
+
+                -- reduce the list of elements of type a
+                -- using mappend as operation
+                mconcat :: [a] -> a
+                -- mconcat = foldl mempty mappend
+                mconcat = foldr mappend mempty
+            </code></pre>
+          </section>
+          <section>
+            <h3>Laws</h3>
+            <p>Any instance of Monoid have to satisfy these rules:</p>
+            <pre><code>
+              -- mempty is the identity element w.r.t mappend
+              mempty `mappend` x = x
+              x `mappend` mempty = x
+              -- mappend is associative
+              (x `mappend` y) `mappend` z = x `mappend` (y `mappend` z)
+            </code></pre>
+          </section>
+          <section>
+            <h3></h3>
+            <pre><code>
+              -- lists are monoids
+              instance Monoid [a] where
+                mempty = []
+                mappend = (++)
+                mconcat = foldr mappend mempty
+            </code></pre>
+          </section>
+        </section>
+        <section data-transition="slide">
+          <section>
+            <h3>Functors</h3>
+            <pre><code>
+              class Functor f where
+                fmap :: (a -> b) -> f a -> f b
+            </code></pre>
+          </section>
+          <section>
+            <h3>Laws</h3>
+            <pre><code>
+              fmap id = id
+              -- '.' is function composition and it
+              -- works as in mathematics
+              fmap (g . h) = (fmap g) . (fmap h)
+            </code></pre>
+          </section>
+          <section>
+            <h3>Examples</h3>
+            <pre><code>
+              instance Functor [] where
+                fmap _ [] = []
+                -- ':' is the operator for list 
+                -- concatenation         
+                fmap g (x:xs) = g x : fmap g xs
+            </code></pre>
+          </section>
+        </section>
+        <section data-transition="slide">
+          <section>
+            <h3>Foldable</h3>
+            <pre><code>
+              class Foldable t where
+                fold :: Monoid m => t m -> m
+                foldMap :: Monoid m => (a -> m) -> t a -> m
+
+                foldr :: (a -> b -> b) -> b -> t a -> b
+                foldl :: (a -> b -> a) -> a -> t b -> a
+                foldr1 :: (a -> a -> a) -> t a -> a
+                foldl1 :: (a -> a -> a) -> t a -> a
+            </code></pre>
+          </section>
+          <section>
+            <h3>Examples</h3>
+            <pre><code>
+    instance Foldable [] where
+      foldMap g = mconcat . map g
+
+    data Tree a = Empty | Leaf a | Node (Tree a) a (Tree a)
+
+    instance Foldable Tree where
+      foldMap f Empty = mempty
+      foldMap f (Leaf x) = f x
+      foldMap f (Node l k r) = foldMap f l `mappend` f k `mappend` foldMap f r
+            </code></pre>
+          </section>
+        </section>
+        <section data-transition="slide">
+          <section>
+            <h3>Applicative</h3>
+            <pre><code>
+              class Functor f => Applicative f where
+                pure :: a -> f a
+                (<*>) :: f (a -> b) -> f a -> f b
+            </code></pre>
+          </section>
+          <section>
+            <h3>Laws</h3>
+            <pre><code>
+              -- identity law
+              pure id <*> v = v
+              -- homomorphism
+              pure f <*> pure x = pure (f x)
+              -- interchange
+              u <*> pure y = pure ($ y) <*> u
+            </code></pre>
+          </section>
+          <section>
+            <h3>Examples</h3>
+            <pre><code>
+              instance Applicative [] where
+                pure x = [x]
+                -- array comprehension
+                gs <*> xs = [ g x | g <- gs, x <- xs ]
+            </code></pre>
+          </section>
+        </section>
+        <section data-transition="slide">
+          <section>
+            <h3>Monad</h3>
+            <pre><code>
+              class Monad m where
+                return :: a -> ma
+                (>>=)  :: m a -> (a -> m b) -> m b
+                (>>)   :: m a -> m b -> m b
+                m >> n = m >>= \_ -> n
+
+                fail   :: String -> m a
+            </code></pre>
+          </section>
+          <section>
+            <h3>Laws</h3>
+            <pre><code>
+              return a >>= k = k a
+              m >>= return = m
+              m >>= (\x -> k x >>= h) = (m >>= k) >>= h
+
+              fmap f xs = xs >>= return . f
+            </code></pre>
+          </section>
+          <section>
+            <h3>do notation</h3>
+            <p>The "do { x <- foo; bar x }" is syntactic sugar for "foo >>= \x -> bar" </p>
+            <pre><code>
+              f :: (Monad m) => m b
+              f = do
+                -- x :: b
+                -- foo :: m a -> m b
+                x <- foo
+                -- bar :: b -> m c
+                bar x
+            </code></pre>
+          </section>
+          <section>
+            <h3>Examples</h3>
+            <pre><code>
+      instance Monad Maybe where
+        -- return :: a -> Maybe a
+        return = Just
+        -- (>>=) :: Maybe a -> (a -> Maybe b) -> Maybe b
+        (Just x) >== g = g x
+        Nothing >>= _ = Nothing
+        -- m >> n = m >>= \_ -> n
+    
+      instance Monad IO where
+        -- return :: a -> IO a
+        return = IO
+        -- (>>=) :: IO a -> (a -> IO b) -> IO b
+        (IO x) >>== g = g x
+
+      main :: IO ()
+      -- putStr :: String -> IO ()
+      main = do putStr "What is your name?"
+                -- readLn :: Read a => IO a
+                -- a is an instance of Read
+                -- so it has a method read
+                -- to convert it from String
+                a <- readLn
+                putStr "How old are you?"
+                b <- readLn
+                -- print :: Show a => a -> IO ()
+                -- a is an instance of Show, so
+                -- it has a method show to convert
+                -- it to String
+                print (a, b)
+
+      main2 = putStr "What is your name?"
+              >> readLn
+              >>= \a -> putStr "How old are you?"
+              >> readLn
+              >>= \b -> print (a, b)
+            </code></pre>
+          </section>
+        </section>
+        <section>
+            <section>
+              <p>You can *hask* <a href="http://twitter.com/chritchen">me</a> anything about Haskell from 25pm to 26pm.</p>
+            </section>
+            <section>
+              <h1>That's all folks!</h1>
+            </section>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+</html>
