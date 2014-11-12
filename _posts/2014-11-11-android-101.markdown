@@ -1,0 +1,24 @@
+---
+layout: post
+title: Android 101
+description: Let's start with the basics of Android development.
+---
+
+TODO
+
+
+
+
+
+Resources:
+
+* Video:
+<iframe width="560" height="315" src="//www.youtube.com/embed/pqUAblybq6k" frameborder="0" allowfullscreen></iframe>
+
+* Slides:
+  
+<script async class="speakerdeck-embed" data-id="49f427904c77013268194ae983a8a7e9" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+* Demo source code: [github](https://github.com/dral3x/Android101Example)
+
+
