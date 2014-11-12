@@ -1,24 +1,19 @@
 ---
 layout: post
 title: Android 101
-description: Let's start with the basics of Android development.
+description: Alessandro introduces the foundations of the Android development with a simple todo app.
 ---
 
-TODO
+Developing for a mobile platform can be very hard and frustrating without the right knowledge of it, but or course it requires a lot of time mastering it.
 
+In this talk, [Alessandro](https://twitter.com/DrAL3X) shows the main building blocks of [Android](http://developer.android.com), what is really important to keep in mind during the development on this platform.
 
+From make the app scaling good on any device to handling device changes in a safe way, he explains how to avoid some pitfails and make your learning a bit more enjoyable (faster too).
 
-
+On the small live coding session, he builds a simple [todo app](https://github.com/dral3x/Android101Example) to show all these things in action.
 
 Resources:
 
-* Video:
 <iframe width="560" height="315" src="//www.youtube.com/embed/pqUAblybq6k" frameborder="0" allowfullscreen></iframe>
 
-* Slides:
-  
 <script async class="speakerdeck-embed" data-id="49f427904c77013268194ae983a8a7e9" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-
-* Demo source code: [github](https://github.com/dral3x/Android101Example)
-
-
