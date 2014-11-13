@@ -8,7 +8,7 @@ Developing for a mobile platform can be very hard and frustrating without the ri
 
 In this talk, [Alessandro](https://twitter.com/DrAL3X) shows the main building blocks of [Android](http://developer.android.com), what is really important to keep in mind during the development on this platform.
 
-From make the app scaling good on any device to handling device changes in a safe way, he explains how to avoid some pitfails and make your learning a bit more enjoyable (faster too).
+From make the app scaling good on any device to handling device changes in a safe way, he explains how to avoid some pitfalls and make your learning a bit more enjoyable (faster too).
 
 On the small live coding session, he builds a simple [todo app](https://github.com/dral3x/Android101Example) to show all these things in action.
 
