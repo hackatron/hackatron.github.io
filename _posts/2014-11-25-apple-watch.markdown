@@ -13,4 +13,4 @@ Resources:
 
 [Slides](http://slides.com/matteocomisso/watch-hackatron-presentation#/)
 
-<iframe width="560" height="315" src="//www.youtube.com/watch?v=2cdJ2dILj40" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/2cdJ2dILj40" frameborder="0" allowfullscreen></iframe>
