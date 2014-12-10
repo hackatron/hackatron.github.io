@@ -19,6 +19,6 @@ Here is a list of the projects:
 1. Kinect for Filmmaker by Fertylize
 1. il-LUMI-nazionei by madaeon
 
-## Resources
+## Projects intro
 
-- [Recording of the projects intro live stream](https://www.youtube.com/watch?v=ufKFVahtOPk)
+<iframe width="560" height="315" src="//www.youtube.com/embed/ufKFVahtOPk" frameborder="0" allowfullscreen></iframe>
