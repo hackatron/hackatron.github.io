@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Hands on!"
+description: Hands on open projects
+---
+
+This meeting focused on working on Hackatron's open projects. We first had a
+quick intro on the projects and then worked on them in groups of three/four
+people.
+
+Here is a list of the projects:
+
+1. DEFCON Level Indicator by theSold(i)er & Johnnytrapano
+1. Active Alarm Systems by tmbh
+1. Pacemaker Light Drone by elruffo
+1. Deploy Button by bugant & bugman
+1. CO2 Auto Fan Ventilation System by persiano
+1. Papertron by matcom
+1. Kinect for Filmmaker by Fertylize
+1. il-LUMI-nazionei by madaeon
+
+## Projects intro
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/ufKFVahtOPk" frameborder="0" allowfullscreen></iframe>
