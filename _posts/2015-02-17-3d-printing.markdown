@@ -1,0 +1,11 @@
+---
+layout: post
+title: "3D printing technologies"
+description: Introduction to the world of 3D printing
+---
+
+An introduction to the world of 3D printing: why use it, who can use it, the different technologies, the materials and a focus on the DLP printers technology.
+
+by [@johnnytrapano](https://twitter.com/johnnytrapano) & [@madaeon](https://twitter.com/madaeon)
+
+Here are the [slides](http://hackatron.org/slides/3d-printing.pdf)!
