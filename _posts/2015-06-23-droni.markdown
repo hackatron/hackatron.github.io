@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Droni - ieri, oggi e domani by Andrea e Marco Coglievina"
+description: Andrea and Marco showed us they home-made drones (ITA content)
+---
+
+In questo intervento sono stati messi in luce progetti e applicazioni che trovano oggi i droni nel panorama commerciale.
+
+Andrea e Marco hanno esposto alcuni droni costruiti da loro e hanno spiegato la tecnologia che li compone.
+
+Infine l'intervento si &egrave; concluso provando il sistema "drone + visore":
+un quadricottero con telecamera GoPro incorporata, che in real-time trasmette le immagini a un visore, per mezzo del quale l'operatore può pilotare il drone.
+
+Le [slide](http://hackatron.org/slides/droni.pdf) dell'intervento sono disponibili!
