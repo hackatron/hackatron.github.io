@@ -11,4 +11,7 @@ Andrea e Marco hanno esposto alcuni droni costruiti da loro e hanno spiegato la 
 Infine l'intervento si &egrave; concluso provando il sistema "drone + visore":
 un quadricottero con telecamera GoPro incorporata, che in real-time trasmette le immagini a un visore, per mezzo del quale l'operatore può pilotare il drone.
 
-Le [slide](http://hackatron.org/slides/droni.pdf) dell'intervento sono disponibili!
+Sono disponibili Le [slide](http://hackatron.org/slides/droni.pdf) dell'intervento, mentre di seguito trovate il video con cui Andrea
+e Marco ci hanno illustrato alcune delle applicazioni dei droni.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I04AaDI3V_Y" frameborder="0" allowfullscreen></iframe>
