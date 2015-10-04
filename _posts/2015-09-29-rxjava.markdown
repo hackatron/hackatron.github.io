@@ -1,0 +1,16 @@
+---
+layout: post
+title: "RxJava: a Java implementation of Reactive Extentions"
+description: Alessandro introduces RxJava and showcase some beneficts of its use for developing asynchronous APIs.
+---
+
+
+TODO:
+
+In this talk, [Alessandro](https://twitter.com/DrAL3X) shows ...
+
+Resources:
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/or-zY2e00Q8" frameborder="0" allowfullscreen></iframe>
+
+<script async class="speakerdeck-embed" data-id="36908aac9a5748ccb10f15a0413131e3" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
