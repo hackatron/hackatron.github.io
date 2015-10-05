@@ -4,9 +4,9 @@ title: "RxJava: a Java implementation of Reactive Extentions"
 description: Alessandro introduces RxJava and showcase some beneficts of its use for developing asynchronous APIs.
 ---
 
-In this talk, [Alessandro](https://twitter.com/DrAL3X) present [RxJava](https://github.com/ReactiveX/RxJava), a framework for developing "future proof" asynchronous APIs based on [Reactive Extension](http://reactivex.io/) concept.
+In this talk, [Alessandro](https://twitter.com/DrAL3X) presents [RxJava](https://github.com/ReactiveX/RxJava), a framework for developing "future proof" asynchronous APIs based on [Reactive Extension](http://reactivex.io/) concept.
 
-Functional, state-less and with built-in error handling, this framework allow you to simplify the usage of an Rx API by letting API implementation handle the concurrency and give out the opportunity of filtering and altering the result of it in a clean chainable way.
+Functional, state-less and with built-in error handling, this framework allows you to simplify the usage of an Rx API by letting API implementation handles the concurrency and gives out the opportunity of filtering and altering the result of it in a clean chainable way.
 
 Rx is implemented in plenty of languages, from [Java](https://github.com/ReactiveX/RxJava) to [Python](https://github.com/ReactiveX/RxPY), from [.Net](https://github.com/Reactive-Extensions/Rx.NET) to [Swift](https://github.com/kzaher/RxSwift) so it's easy to re-use Rx knowledge everywhere.
 
