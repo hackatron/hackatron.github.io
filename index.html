@@ -4,8 +4,6 @@ title: Hackatron
 description: We're a group of developers, designers, tinkers. We want to have fun building things and learning something new.
 ---
 
-<div id="next_meeting"></div>
-
 <div id="search">
   <form>
     <input id="q" name="q" placeholder="Search">
@@ -40,15 +38,5 @@ description: We're a group of developers, designers, tinkers. We want to have fu
         $('#results_container').show();
       }
     }});
-
-    $.ajax({
-      type: 'GET',
-      dataType: 'jsonp',
-      cache: false,
-      url: 'http://hackatron-hubot.herokuapp.com/hubot/topic/hackatron',
-      success: function(topic) {
-        $('#next_meeting').html('<h2>Next meeting: ' + topic + '</h2>');
-      }
-    });
   });
 </script>
